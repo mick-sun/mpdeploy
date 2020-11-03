@@ -1,4 +1,4 @@
-# mpci
+# mpdeploy
 
 [![Build Status][travis-img]][travis-url]
 [![Coverage Status][codecov-img]][codecov-url]
@@ -9,45 +9,83 @@
 [![devDependency Status][devdependency-img]][devdependency-url]
 [![Code Style][style-img]][style-url]
 
-> 微信小程序(游戏)发布助手
+> 微信小程序(游戏)自动发布CLI
 
 ## Installation
 
 ```shell
-$ npm install mpci
+$ npm install mpdeploy
 
 # or yarn
-$ yarn add mpci
+$ yarn add mpdeploy
 ```
 
 ## Usage
 
 <!-- TODO: Introduction of Usage -->
 
-```javascript
-const mpci = require('mpci')
-const result = mpci('w')
-// result => 'w@zce.me'
+```bash
+mpdeploy upload 
+
+mpdeploy preview 
 ```
 
 ## API
 
 <!-- TODO: Introduction of API -->
 
-### mpci(input, options?)
+### mpdeploy(input, options?)
 
 #### input
 
 - Type: `string`
-- Details: name string
+- Details: actions upload or preview
 
 #### options
 
-##### host
+##### ver
 
 - Type: `string`
-- Details: host string
-- Default: `'zce.me'`
+- Details: miniprogram version
+
+##### workspace
+
+- Type: `string`
+- Details: workspace
+- Default: `.`
+
+##### type
+
+- Type: `string`
+- Details: Project type
+- Default: `miniProgram`
+
+##### desc
+
+- Type: `string`
+- Details: Project description
+- Default: `latest git commit log message`
+
+##### pkp
+
+- Type: `string`
+- Details: The MP private key path
+- Default: ``
+
+##### proxy
+
+- Type: `string`
+- Details: The proxy url
+- Default: ``
+
+##### robot
+
+- Type: `string`
+- Details: The robot number 1~30
+- Default: `1`
+
+
+
 
 ## CLI Usage
 
@@ -56,29 +94,29 @@ const result = mpci('w')
 Use npx:
 
 ```shell
-$ npx mpci <input> [options]
+$ npx mpdeploy <input> [options]
 ```
 
 Globally install:
 
 ```shell
-$ npm install mpci -g
+$ npm install mpdeploy -g
 # or yarn
-$ yarn global add mpci
+$ yarn global add mpdeploy
 ```
 
 ```shell
-$ mpci --help
+$ mpdeploy --help
 demo v0.1.0
 
 Usage:
-  $ mpci <input>
+  $ mpdeploy <input>
 
 Commands:
   <input>  Sample cli program
 
 For more info, run any command with the `--help` flag:
-  $ mpci --help
+  $ mpdeploy --help
 
 Options:
   --host <host>  Sample options
@@ -86,7 +124,7 @@ Options:
   -v, --version  Display version number
 
 Examples:
-  $ mpci w --host zce.me
+  $ mpdeploy w --host zce.me
 ```
 
 ## Contributing
@@ -106,19 +144,19 @@ Examples:
 
 
 
-[travis-img]: https://img.shields.io/travis/com/mick-sun/mpci
-[travis-url]: https://travis-ci.com/mick-sun/mpci
-[codecov-img]: https://img.shields.io/codecov/c/github/mick-sun/mpci
-[codecov-url]: https://codecov.io/gh/mick-sun/mpci
-[license-img]: https://img.shields.io/github/license/mick-sun/mpci
-[license-url]: https://github.com/mick-sun/mpci/blob/master/LICENSE
-[downloads-img]: https://img.shields.io/npm/dm/mpci
-[downloads-url]: https://npmjs.org/package/mpci
-[version-img]: https://img.shields.io/npm/v/mpci
-[version-url]: https://npmjs.org/package/mpci
-[dependency-img]: https://img.shields.io/david/mick-sun/mpci
-[dependency-url]: https://david-dm.org/mick-sun/mpci
-[devdependency-img]: https://img.shields.io/david/dev/mick-sun/mpci
-[devdependency-url]: https://david-dm.org/mick-sun/mpci?type=dev
+[travis-img]: https://img.shields.io/travis/com/mick-sun/mpdeploy
+[travis-url]: https://travis-ci.com/mick-sun/mpdeploy
+[codecov-img]: https://img.shields.io/codecov/c/github/mick-sun/mpdeploy
+[codecov-url]: https://codecov.io/gh/mick-sun/mpdeploy
+[license-img]: https://img.shields.io/github/license/mick-sun/mpdeploy
+[license-url]: https://github.com/mick-sun/mpdeploy/blob/master/LICENSE
+[downloads-img]: https://img.shields.io/npm/dm/mpdeploy
+[downloads-url]: https://npmjs.org/package/mpdeploy
+[version-img]: https://img.shields.io/npm/v/mpdeploy
+[version-url]: https://npmjs.org/package/mpdeploy
+[dependency-img]: https://img.shields.io/david/mick-sun/mpdeploy
+[dependency-url]: https://david-dm.org/mick-sun/mpdeploy
+[devdependency-img]: https://img.shields.io/david/dev/mick-sun/mpdeploy
+[devdependency-url]: https://david-dm.org/mick-sun/mpdeploy?type=dev
 [style-img]: https://img.shields.io/badge/code_style-standard-brightgreen
 [style-url]: https://standardjs.com

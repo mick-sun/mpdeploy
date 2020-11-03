@@ -1,9 +1,9 @@
 {
-  "name": "mpci",
-  "version": "0.0.1",
+  "name": "mpdeploy",
+  "version": "0.0.2",
   "description": "微信小程序(游戏)自动发布CLI",
   "keywords": [
-    "mpci",
+    "mpdeploy",
     "cli",
     "miniprogram-ci"
   ],

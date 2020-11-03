@@ -19,8 +19,7 @@ const cli = cac(name)
 // TODO: Implement module cli
 
 cli.command('<input>', 'upload or preview')
-  .option('--env <env>', 'Environment type, e.g dev | test | prod')
-  .option('--workspace <workspace>', 'Environment type, e.g dev | test | prod')
+  .option('--workspace <workspace>', 'Workspace')
   .option('--type <type>', 'Project type, e.g miniProgram | miniProgramPlugin | miniGame | miniGamePlugin')
   .option('--ver <ver>', 'Project version, e.g v1.0.0')
   .option('--desc <desc>', 'Project publish description')
