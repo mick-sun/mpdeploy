@@ -7,13 +7,13 @@
     "cli",
     "miniprogram-ci"
   ],
-  "homepage": "https://github.com/mick-sun/mpci#readme",
+  "homepage": "https://github.com/mick-sun/mpdeploy#readme",
   "bugs": {
-    "url": "https://github.com/mick-sun/mpci/issues"
+    "url": "https://github.com/mick-sun/mpdeploy/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mick-sun/mpci.git"
+    "url": "git+https://github.com/mick-sun/mpdeploy.git"
   },
   "license": "MIT",
   "author": {
