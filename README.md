@@ -11,7 +11,7 @@
 
 > 微信小程序(游戏)自动发布CLI
 
-## Installation
+## 安装
 
 ```shell
 $ npm install mpdeploy
@@ -20,77 +20,63 @@ $ npm install mpdeploy
 $ yarn add mpdeploy
 ```
 
-## Usage
+## 使用
 
-<!-- TODO: Introduction of Usage -->
+### 生成配置文件
+执行`mpdeploy init`，自动生成`.mpdeployrc.js`到当前目录 
 
-```bash
-mpdeploy upload 
-
-mpdeploy preview 
+```js
+module.exports = {
+  type: 'miniProgram',
+  workspace: 'mpdeploy workspace path',
+  pkp: 'weixin private key path',
+  ver: '',
+  desc: '',
+  proxy: '',
+  robot: '',
+  setting: {
+    es6: false,
+    es7: false,
+    minifyJS: false,
+    minifyWXML: false,
+    minifyWXSS: false,
+    minify: true,
+    codeProtect: false,
+    autoPrefixWXSS: true
+  }
+}
 ```
 
-## API
+### 上传代码到微信
+`mpdeploy upload`
 
-<!-- TODO: Introduction of API -->
+可选参数：(会覆盖`.mpdeployrc.js`中到配置) 
 
-### mpdeploy(input, options?)
+```
+--workspace 指定工作目录
+--type 指定项目类型 miniProgram | miniProgramPlugin | miniGame | miniGamePlugin
+--ver 指定版本号
+--desc 指定版本描述
+--pkp 指定私钥路径
+--proxy 指定代理URL
+--robot 指定机器人编号 1~30
+```
 
-#### input
+### 预览小程序 
+`mpdeploy preview`
+可选参数：(会覆盖`.mpdeployrc.js`中到配置) 
 
-- Type: `string`
-- Details: actions upload or preview
-
-#### options
-
-##### ver
-
-- Type: `string`
-- Details: miniprogram version
-
-##### workspace
-
-- Type: `string`
-- Details: workspace
-- Default: `.`
-
-##### type
-
-- Type: `string`
-- Details: Project type
-- Default: `miniProgram`
-
-##### desc
-
-- Type: `string`
-- Details: Project description
-- Default: `latest git commit log message`
-
-##### pkp
-
-- Type: `string`
-- Details: The MP private key path
-- Default: ``
-
-##### proxy
-
-- Type: `string`
-- Details: The proxy url
-- Default: ``
-
-##### robot
-
-- Type: `string`
-- Details: The robot number 1~30
-- Default: `1`
-
-
-
+```
+--workspace 指定工作目录
+--type 指定项目类型 miniProgram | miniProgramPlugin | miniGame | miniGamePlugin
+--ver 指定版本号
+--desc 指定版本描述
+--pkp 指定私钥路径
+--proxy 指定代理URL
+--robot 指定机器人编号 1~30
+```
 
 ## CLI Usage
-
-<!-- TODO: Introduction of CLI -->
-
 Use npx:
 
 ```shell
@@ -103,28 +89,6 @@ Globally install:
 $ npm install mpdeploy -g
 # or yarn
 $ yarn global add mpdeploy
-```
-
-```shell
-$ mpdeploy --help
-demo v0.1.0
-
-Usage:
-  $ mpdeploy <input>
-
-Commands:
-  <input>  Sample cli program
-
-For more info, run any command with the `--help` flag:
-  $ mpdeploy --help
-
-Options:
-  --host <host>  Sample options
-  -h, --help     Display this message
-  -v, --version  Display version number
-
-Examples:
-  $ mpdeploy w --host zce.me
 ```
 
 ## Contributing
