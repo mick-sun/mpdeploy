@@ -1,12 +1,13 @@
 {
   "name": "mpdeploy",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "微信小程序(游戏)自动发布CLI",
   "keywords": [
     "mpdeploy",
     "ci",
     "mp-ci",
-    "miniprogram-ci"
+    "miniprogram-ci",
+    "小程序发布"
   ],
   "homepage": "https://github.com/mick-sun/mpdeploy#readme",
   "bugs": {
