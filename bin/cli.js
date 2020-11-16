@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const cac = require('cac')
-const mpci = require('..')
+const mpdeploy = require('..')
 const { name, version } = require('../package')
 
 // Unified error handling
@@ -26,9 +26,13 @@ cli.command('<input>', 'upload or preview')
   .option('--pkp <pkp>', 'The private key path')
   .option('--proxy <proxy>', 'The proxy url')
   .option('--robot <robot>', 'The robot number, 1~30')
-  .example('$ mpci upload --env test --type miniProgram --ver 1.2.0 --desc test')
+  .option('--page <page>', 'Preview page path')
+  .option('--format <format>', 'Qrcode picture format "image" or "base64"， default "terminal"')
+  .option('--query <query>', 'Preview page query params')
+  .option('--scene <scene>', 'Scene value, default 1011')
+  .example('$ mpdeploy upload --env test --type miniProgram --ver 1.2.0 --desc test')
   .action((input, options) => {
-    mpci(input, options)
+    mpdeploy(input, options)
   })
 
 cli.help().version(version).parse()
