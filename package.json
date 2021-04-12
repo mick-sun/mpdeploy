@@ -1,6 +1,6 @@
 {
   "name": "mpdeploy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "微信小程序(游戏)自动发布CLI",
   "keywords": [
     "mpdeploy",
